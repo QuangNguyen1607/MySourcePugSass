@@ -1,0 +1,57 @@
+.global-breadcrumb
+	width: 100%
+	background-color: white
+	border-bottom: solid 1px #e1e1e1
+	.breadcrumb
+		display: flex
+		align-items: center
+		background-color: transparent
+		flex-wrap: wrap
+		padding: 10px 0
+		list-style: none
+		margin-bottom: 0
+		li
+			position: relative
+			padding: 0 10px
+			display: flex
+			align-items: center
+			a
+				font-size: 14px
+				color: #666666
+				font-weight: 500
+				text-decoration: none
+				@media(max-width: 991.98px)
+					font-size: 10px
+			&.active
+				a
+					color: $main-hover
+			&:hover
+				a
+					color: $main-hover
+
+			&:first-child
+				padding-left: 0
+				a
+					font-size: 0
+					&::after
+						font-family: 'remixicon'
+						font-size: 16px
+						content: "\EE1C"
+						color: #999999
+
+		li+li
+			&::before
+				position: absolute
+				top: 50%
+				left: -7px
+				transform: translateY(-50%)
+				font-family: Material Icons
+				font-size: 18px
+				content: "keyboard_arrow_right"
+				color: #999999
+
+	@media(min-width: 768.98px)
+		margin-bottom: 0
+
+	@media(min-width: 320px)
+		margin-bottom: 0

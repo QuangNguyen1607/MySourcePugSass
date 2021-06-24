@@ -1,0 +1,18 @@
+section.banner-home#home-banner
+	.swiper-container.slide-home
+		.swiper-wrapper
+			- for(var i = 0; i < 4; ++i)
+				.swiper-slide 
+					.box-banner
+						.img
+							img(src="./assets/banner/banner-home.png", alt="")
+						.box-text
+							h2 Gạch ốp tường 
+								br
+								span Thương hiệu viglacera
+							a(href="").button-xemthem
+								| Xem thêm
+								span.material-icons
+									| arrow_forward
+		// Add Pagination
+		.swiper-pagination.swiper-pagination-1
